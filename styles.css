@@ -1,142 +1,102 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
+
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    background-color: white ;  
+    overflow: auto;  
+}  
+  
+header {  
+    background-color: rgba(51, 51, 51, 0);  
+    color: #fff;  
+    padding: 5px 10px;  
+    text-align: left;  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    transition: background-color 0.3s ease;  
+    height: 50px;   
+}  
+  
+header:hover {  
+    background-color: rgba(51, 51, 51, 0.7);  
+}  
+  
+h1 {  
+    display: flex;  
+    align-items: center;  
+    margin-left: 5px;  
+}  
+  
+h1 img {  
+    display: block;  
+    max-width: 150px;   
+    height: auto;  
+}  
+  
+nav {  
+    background-color: rgba(51, 51, 51, 0);  
+    padding: 5px 10px;   
+    display: flex;  
+    order: -1;  
+}  
+  
+nav a {  
+    text-decoration: none;  
+    color: white;  
+    padding: 6px;   
+    margin: 5px;  
+    display: inline-block;  
+    font-size: 12px;   
+}  
+  
+section {  
+    padding: 20px;  
+}  
+ 
+.profile-picture {  
+    width: 40px;   
+    height: 40px;   
+    border-radius: 50%;   
+    right:10px; 
+    border: 2px solid white;   
+}  
+ 
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
     overflow: hidden;
 }
 
-header {
-    background-color: rgba(51, 51, 51, 0);
-    color: #fff;
-    padding: 5px 10px;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease;
-    height: 50px; 
-}
-
-header:hover {
-    background-color: rgba(51, 51, 51, 0.7);
-}
-
-h1 {
-    display: flex;
-    align-items: center;
-    margin-left: 5px;
-}
-
-h1 img {
+.carousel img {
+    width: 100%;
     display: block;
-    max-width: 150px; 
-    height: auto;
+    transition: opacity 1s ease-in-out;
 }
 
-nav {
-    background-color: rgba(51, 51, 51, 0);
-    padding: 5px 10px; 
-    display: flex;
-    order: -1;
+.carousel img.fade-out {
+    opacity: 0;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    padding: 6px; 
-    margin: 5px;
-    display: inline-block;
-    font-size: 12px; 
+.carousel img.active {
+    opacity: 1;
 }
 
-section {
-    padding: 20px;
-}
-
-.product {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    background-color: #fff;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.carousel-inner img {
-    width: 100%;
-    height: auto;
-}
-
-.image-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    z-index: -1;
-    transition: filter 0.5s ease;
-}
-
-.image-background img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: center;
-    filter: brightness(60%); 
-}
-
-.text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1; 
-}
-
-.text-overlay h2 {
-    color: white;
-    font-size: 2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.profile-picture {
-    width: 40px; 
-    height: 40px; 
-    border-radius: 50%; 
-    margin-left: 10px; 
-    border: 2px solid white; 
-}
-
-.data-container {  
-    padding: 20px;  
-    background-color: #f8f8f8;  
-    border: 1px solid #ddd;  
-    margin: 20px;  
-}  
+footer { 
+    background-color: #333; 
+    color: #fff; 
+    text-align: center; 
+    padding: 10px; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+} 
  
-.data-container img {  
-    width: 100px; 
-}
-
-#data-container div {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-}
-
+/*login*/ 
 .login { 
     font-family: 'Arial', sans-serif; 
     height: 200px; 
@@ -220,4 +180,68 @@ button.login-button:hover {
     bottom: 400px; 
     font-size: 20px; 
     text-decoration: underline; 
+} 
+ 
+/*shop*/ 
+.data-container {  
+    padding: 20px;  
+    background-color: white;  
+    border: 2px solid black;  
+    margin: 20px;  
+}  
+ 
+.data-container img {  
+    width: 100px; 
+} 
+ 
+/*homepage*/ 
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.image-background { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    z-index: -1; 
+    transition: filter 0.5s ease; 
+} 
+ 
+.image-background img { 
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover; 
+    position: center; 
+    filter: brightness(60%);  
+} 
+ 
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+}
+
+.fade {
+    animation: fadeEffect 3s infinite;
+}
+
+@keyframes fadeEffect {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
