@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;  
     margin: 0;  
     padding: 0;  
-    background-color: white ;  
+    background-color: white;  
     overflow: auto;  
 }  
   
@@ -17,6 +17,8 @@ header {
     align-items: center;  
     transition: background-color 0.3s ease;  
     height: 50px;   
+    position: relative;
+    z-index: 1
 }  
   
 header:hover {  
@@ -27,6 +29,7 @@ h1 {
     display: flex;  
     align-items: center;  
     margin-left: 5px;  
+    margin-bottom: 20px;
 }  
   
 h1 img {  
@@ -40,15 +43,16 @@ nav {
     padding: 5px 10px;   
     display: flex;  
     order: -1;  
+    font-size: 60;
 }  
   
 nav a {  
     text-decoration: none;  
-    color: white;  
+    color: black;  
     padding: 6px;   
     margin: 5px;  
     display: inline-block;  
-    font-size: 12px;   
+    font-size: 13px;   
 }  
   
 section {  
@@ -79,22 +83,12 @@ section {
 }
 
 .carousel img.fade-out {
-    opacity: 0;
+    opacity: 0.5;
 }
 
 .carousel img.active {
     opacity: 1;
 }
-
-footer { 
-    background-color: #333; 
-    color: #fff; 
-    text-align: center; 
-    padding: 10px; 
-    position: fixed; 
-    bottom: 0; 
-    width: 100%; 
-} 
  
 /*login*/ 
 .login { 
@@ -196,52 +190,58 @@ button.login-button:hover {
  
 /*homepage*/ 
 
-.slideshow-container {
-    position: relative;
-    max-width: 1000px;
-    margin: auto;
+.slider-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: -100px; /* Move the slider up by 50px */
 }
 
-.image-background { 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    z-index: -1; 
-    transition: filter 0.5s ease; 
-} 
- 
-.image-background img { 
-    width: 100vw; 
-    height: 100vh; 
-    object-fit: cover; 
-    position: center; 
-    filter: brightness(60%);  
-} 
- 
-.text-overlay {
+.slider {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh; /* Set minimum height to ensure full screen */
+    top: 100px; /* Adjust the top positioning */
 }
 
-.fade {
-    animation: fadeEffect 3s infinite;
+.slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-@keyframes fadeEffect {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+.slider img.active {
+    opacity: 1;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }

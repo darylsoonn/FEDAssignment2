@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll('.slider img');
+    let currentSlide = 0;
+
+    function showSlide() {
+        // Hide all slides
+        slides.forEach(slide => slide.classList.remove('active'));
+        // Show current slide
+        slides[currentSlide].classList.add('active');
+        // Move to the next slide
+        currentSlide = (currentSlide + 1) % slides.length;
+        // Call the function recursively after 3 seconds
+        setTimeout(showSlide, 3000);
+    }
+
+    // Initial call to start the slideshow
+    showSlide();
+});
+
+
 //shop 
 async function fetchData(productId) {  
     try {  
@@ -28,40 +48,20 @@ async function fetchData(productId) {
     fetchData(productId); 
   } 
    
-  document.addEventListener('DOMContentLoaded', function() {
-    let images = document.querySelectorAll('.carousel img');
-    let index = 0;
+  document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll('.fade');
+    let currentSlide = 0;
 
-    setInterval(function() {
-        // Hide the current image
-        images[index].classList.remove('active');
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
 
-        // Move to the next image
-        index = (index + 1) % images.length;
-
-        // Show the next image
-        images[index].classList.add('active');
-    }, 3000); // Change image every 3 seconds (adjust as needed)
+    setInterval(nextSlide, 6000); // Change image every 6 seconds (adjust as needed)
 });
 
 
-let slideIndex = 0;
-const slides = document.querySelectorAll('.image-background');
-
-function showSlides() {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
-
-showSlides();
-   
   //login 
   document.getElementById('login-button').addEventListener('click', function(event) { 
     event.preventDefault(); // Prevent the default form submission 
