@@ -69,29 +69,105 @@ section {
     border: 2px solid white;   
 }  
  
+/*homepage*/ 
 
-.carousel {
+.slider-wrapper {
     position: relative;
+    top: -200px; /* Adjust the value to move the slider up by 20 pixels */
+    left: 0;
     width: 100%;
-    max-width: 800px; /* Adjust as needed */
-    margin: 0 auto;
-    overflow: hidden;
+    height: 100vh;
+    overflow: auto;
+    z-index: 0;
+    margin-top: 0; /* Reset margin-top */
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+    border-right: none;
 }
 
-.carousel img {
+
+
+.slider {
+    position: absolute;
     width: 100%;
-    display: block;
+    min-height: calc(100vh - 100px); /* Subtract the height of the header */
+    top: 100px; /* Adjust the top positioning */
+    margin-bottom: 20px; /* Add margin to create space for subsequent content */
+}
+
+
+.slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Set width to 100vw to fill up the entire width of the viewport */
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
-.carousel img.fade-out {
-    opacity: 0.5;
-}
 
-.carousel img.active {
+.slider img.active {
     opacity: 1;
 }
- 
+
+@keyframes fade {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.history {
+    padding: 20px;
+    position: absolute; /* Change position to absolute */
+    z-index: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    top: 50%; /* Move it down by 50% of its containing block */
+    left: 70%; /* Move it to the right by 50% of its containing block */
+    transform: translate(-50%, -50%);
+}
+
+.gallery-slider {
+    height: 100vh;
+    width: 100vw;
+    background-color: lightgrey;
+    margin: 0rem;
+    overflow: hidden;
+    margin-top: -260px;
+}
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%); 
+    user-select: none; 
+    margin-top: 800px;
+  }
+  
+  #image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+  }
+  
+  
+
 /*login*/ 
 .login { 
     font-family: 'Arial', sans-serif; 
@@ -190,72 +266,3 @@ button.login-button:hover {
     width: 100px; 
 } 
  
-/*homepage*/ 
-
-.slider-wrapper {
-    position: absolute; /* Change position to fixed */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: auto; /* Change overflow to auto or remove it */
-    z-index: 0;
-    margin-top: -100px; /* Move the slider up by 50px */
-    margin-left: 0; /* Reset margin */
-    margin-right: 0; /* Reset margin */
-    padding-left: 0; /* Reset padding */
-    padding-right: 0; /* Reset padding */
-    border-left: none; /* Reset border */
-    border-right: none; /* Reset border */
-}
-
-
-
-.slider {
-    position: absolute;
-    width: 100%;
-    min-height: calc(100vh - 100px); /* Subtract the height of the header */
-    top: 100px; /* Adjust the top positioning */
-    margin-bottom: 20px; /* Add margin to create space for subsequent content */
-}
-
-
-.slider img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Set width to 100vw to fill up the entire width of the viewport */
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-
-.slider img.active {
-    opacity: 1;
-}
-
-@keyframes fade {
-    0% { opacity: 0; }
-    25% { opacity: 1; }
-    75% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.history {
-    padding: 20px;
-    position: absolute; /* Change position to absolute */
-    z-index: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #fff;
-    top: 70%; /* Move it down by 50% of its containing block */
-    left: 70%; /* Move it to the right by 50% of its containing block */
-    transform: translate(-50%, -50%); /* Center it horizontally and vertically */
-}
