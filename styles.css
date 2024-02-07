@@ -1,13 +1,12 @@
-
 body {  
     font-family: Arial, sans-serif;  
     margin: 0;  
     padding: 0;  
-    background-color: white;  
+    background-color: lightgrey;  
     overflow: auto;  
     overflow-x: hidden;
 }  
-  
+ 
 header {  
     background-color: rgba(51, 51, 51, 0);  
     color: #fff;  
@@ -17,76 +16,93 @@ header {
     justify-content: space-between;  
     align-items: center;  
     transition: background-color 0.3s ease;  
-    height: 50px;   
+    height: 50px;  
     position: relative;
-    z-index: 1
+    z-index: 1;
+    width: 100%;
 }  
-  
+ 
 header:hover {  
     background-color: rgba(51, 51, 51, 0.7);  
 }  
-  
+ 
 h1 {  
     display: flex;  
     align-items: center;  
     margin-left: 5px;  
     margin-bottom: 20px;
 }  
-  
+ 
 h1 img {  
     display: block;  
-    max-width: 150px;   
+    max-width: 150px;  
     height: auto;  
 }  
-  
+ 
 nav {  
     background-color: rgba(51, 51, 51, 0);  
-    padding: 5px 10px;   
+    padding: 5px 10px;  
     display: flex;  
     order: -1;  
     font-size: 60;
 }  
-  
+ 
 nav a {  
     text-decoration: none;  
     color: white;  
-    padding: 6px;   
+    padding: 6px;  
     margin: 5px;  
     display: inline-block;  
-    font-size: 13px;   
-    font-family: Bodoni MT, Bodoni 72, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif; 
+    font-size: 13px;  
+    font-family: Bodoni MT, Bodoni 72, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
 }  
-  
+ 
 section {  
     padding: 20px;  
 }  
  
 .profile-picture {  
-    width: 40px;   
-    height: 40px;   
-    border-radius: 50%;   
-    right:10px; 
-    border: 2px solid white;   
+    width: 40px;  
+    height: 40px;  
+    border-radius: 50%;  
+    right:10px;
+    border: 2px solid white;  
 }  
+
+
+
+
+@media only screen and (max-width: 600px) {
+    /* CSS rules for screens up to 600px wide (typical mobile phones) */
+    /* Adjust layout, font sizes, etc. for smaller screens */
+  }
  
-/*homepage*/ 
+/*homepage*/
+
+
+
 
 .slider-wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     top: -200px; /* Adjust the value to move the slider up by 20 pixels */
     left: 0;
     width: 100%;
     height: 100vh;
     overflow: auto;
     z-index: 0;
-    margin-top: 0; /* Reset margin-top */
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    border-left: none;
-    border-right: none;
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,6 +113,12 @@ section {
     top: 100px; /* Adjust the top positioning */
     margin-bottom: 20px; /* Add margin to create space for subsequent content */
 }
+
+
+
+
+
+
 
 
 .slider img {
@@ -111,9 +133,18 @@ section {
 }
 
 
+
+
+
+
+
+
 .slider img.active {
     opacity: 1;
 }
+
+
+
 
 @keyframes fade {
     0% { opacity: 0; }
@@ -122,11 +153,8 @@ section {
     100% { opacity: 0; }
 }
 
-body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-}
+
+
 
 .history {
     padding: 20px;
@@ -139,7 +167,22 @@ body {
     transform: translate(-50%, -50%);
 }
 
+
+
+
+
+
+
+
+.gallery {
+    width: 100%; /* Ensure the gallery spans the entire width of its container */
+    max-width: 100%; /* Limit the maximum width to prevent overflow */
+}
 .gallery-slider {
+    display: fixed;
+    justify-content: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     height: 100vh;
     width: 100vw;
     background-color: lightgrey;
@@ -148,113 +191,119 @@ body {
     margin-top: -260px;
 }
 
+
+
+
 #image-track {
     display: flex;
+    scroll-snap-type: x mandatory;
     gap: 4vmin;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(0%, -50%); 
-    user-select: none; 
+    transform: translate(0%, -50%);
+    user-select: none;
     margin-top: 800px;
   }
-  
+ 
   #image-track > .image {
     width: 40vmin;
     height: 56vmin;
     object-fit: cover;
     object-position: 100% center;
   }
-  
-  
+ 
 
-/*login*/ 
-.login { 
-    font-family: 'Arial', sans-serif; 
-    height: 200px; 
-    width: 400px; 
-    position: relative; 
-    left: 1700px; 
-    top: 100px; 
-    font-size: 30px; 
-} 
+
+
+
+/*login*/
+.login {
+    font-family: 'Arial', sans-serif;
+    height: 200px;
+    width: 400px;
+    position: relative;
+    left: 1700px;
+    top: 100px;
+    font-size: 30px;
+}
  
-.user { 
-    font-family: 'Arial', sans-serif; 
-    position: relative; 
-    left: 1380px; 
-    height: 500px; 
-    width: 500px; 
-    top: 100px; 
-} 
- 
- 
-.user label { 
-    font-size: 33px; 
-} 
- 
-.user input { 
-    font-size: 16px; 
-    width:100%; 
-    width: 500px; 
-    padding: 16px; 
-    box-sizing: border-box; 
-    margin-top: 5px; 
-} 
- 
-.password { 
-    font-family: 'Arial', sans-serif; 
-    position: relative; 
-    left: 1380px; 
-    height: 500px; 
-    width: 500px; 
-    bottom: 200px 
-} 
- 
-.password label { 
-    font-size: 33px; 
-} 
- 
-.password input { 
-    font-size: 16px; 
-    width:100%; 
-    width: 500px; 
-    padding: 16px; 
-    box-sizing: border-box; 
-    margin-top: 5px; 
-} 
+.user {
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    left: 1380px;
+    height: 500px;
+    width: 500px;
+    top: 100px;
+}
  
  
-button.login-button { 
-    width: 400px; 
-    height: 50px; 
-    color: #fff; 
-    background-color: #4CAF50; 
-    position: relative; 
-    bottom: 450px; 
-    left: 1480px; 
-    text-align: center; 
-    font-size: 20px; 
+.user label {
+    font-size: 33px;
+}
+ 
+.user input {
+    font-size: 16px;
+    width:100%;
+    width: 500px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+ 
+.password {
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    left: 1380px;
+    height: 500px;
+    width: 500px;
+    bottom: 200px
+}
+ 
+.password label {
+    font-size: 33px;
+}
+ 
+.password input {
+    font-size: 16px;
+    width:100%;
+    width: 500px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+ 
+ 
+button.login-button {
+    width: 400px;
+    height: 50px;
+    color: #fff;
+    background-color: #4CAF50;
+    position: relative;
+    bottom: 450px;
+    left: 1480px;
+    text-align: center;
+    font-size: 20px;
     border: none;  
-    cursor: pointer; 
-} 
+    cursor: pointer;
+}
  
-button.login-button:hover { 
-    background-color: #45a049; 
-} 
+button.login-button:hover {
+    background-color: #45a049;
+}
  
-.signup { 
-    font-family: 'Arial', sans-serif; 
-    height: 200px; 
-    width: 400px; 
-    position: relative; 
-    left: 1760px; 
-    bottom: 400px; 
-    font-size: 20px; 
-    text-decoration: underline; 
-} 
+.signup {
+    font-family: 'Arial', sans-serif;
+    height: 200px;
+    width: 400px;
+    position: relative;
+    left: 1760px;
+    bottom: 400px;
+    font-size: 20px;
+    text-decoration: underline;
+}
  
-/*shop*/ 
+/*shop*/
 .data-container {  
     padding: 20px;  
     background-color: white;  
@@ -263,6 +312,239 @@ button.login-button:hover {
 }  
  
 .data-container img {  
-    width: 100px; 
-} 
+    width: 100px;
+}
+
+
+/* Media Queries for Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+
+
+
+
+    /* Header Styles */
+    header {
+        padding: 10px;
+    }
+
+
+
+
+    /* Navigation Styles */
+    nav {
+        font-size: 40px;
+    }
+
+
+
+
+    /* Homepage Slider Styles */
+    .slider-wrapper {
+        top: -150px;
+    }
+
+
+
+
+    .slider {
+        top: 50px;
+        min-height: calc(100vh - 50px);
+    }
+
+
+
+
+    /* History Section Styles */
+    .history {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+
+
+    .gallery {
+        width: 100px;
+        height: auto;
+    }
+
+
+    /* Gallery Slider Styles */
+    .gallery-slider {
+        max-width: 100%; /* Adjusted max-width for mobile */
+        margin-top: -160px;
+        overflow-x: auto; /* Added overflow-x property for smaller screens */
+    }
+
+
+    #image-track {
+        margin-top: 300px;
+    }
+
+
+
+
+    /* Login Styles */
+    .login, .user, .password {
+        left: 10%;
+        width: 80%;
+    }
+
+
+
+
+    .login-button {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+
+
+
+
+    .signup {
+        left: 15%;
+        bottom: 100px;
+    }
+
+
+
+
+    /* Shop Styles */
+    .data-container {
+        margin: 10px;
+    }
+
+
+
+
+    .body header img {
+        height: auto;
+        width: 50px;
+    }
+
+
+
+
+}
+
+
+
+
+/* Media Queries for Mobile Responsiveness */
+@media only screen and (max-width: 480px) {
+    /* Adjust styles for even smaller screens */
+
+
+
+
+    /* Header Styles */
+    header {
+        padding: 5px;
+    }
+
+
+
+
+    /* Navigation Styles */
+    nav {
+        font-size: 30px;
+    }
+
+
+
+
+    /* Homepage Slider Styles */
+    .slider-wrapper {
+        top: -100px;
+    }
+
+
+
+
+    .slider {
+        top: 30px;
+        min-height: calc(100vh - 30px);
+    }
+
+
+
+
+    /* History Section Styles */
+    .history {
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+    }
+
+
+
+
+    /* Gallery Slider Styles */
+    .gallery-slider {
+        max-width: 100%; /* Adjusted max-width for smaller screens */
+        margin-top: -120px;
+        overflow-x: auto; /* Added overflow-x property for smaller screens */
+    }
+
+
+    .gallery-slider #image-track image {
+        width: 2px;
+    }
+
+
+    #image-track {
+        margin-top: 200px;
+    }
+
+
+
+
+    /* Login Styles */
+    .login, .user, .password {
+        left: 5%;
+        width: 90%;
+    }
+
+
+
+
+    .login-button {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+
+
+
+
+    .signup {
+        left: 10%;
+        bottom: 50px;
+    }
+
+
+
+
+    /* Shop Styles */
+    .data-container {
+        margin: 5px;
+    }
+
+
+
+
+    .logo {
+        height: auto;
+        width: 50px;
+    }
+
+
+
+
+}
+
+
+
+/*trivia*/
  
