@@ -1,0 +1,219 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0);
+    color: #fff;
+    padding: 15px 10px 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+header:hover {
+    background-color: rgba(51, 51, 51, 0.7);
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+h1 img {
+    display: block;
+    max-width: 150px;
+    height: auto;
+}
+
+nav {
+    background-color: rgba(51, 51, 51, 0);
+    padding: 5px 10px;
+    display: flex;
+    order: -1;
+    font-size: 60;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 6px;
+    margin: 5px;
+    display: inline-block;
+    font-size: 13px;
+    font-family: Bodoni MT, Bodoni 72, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+}
+
+section {
+    padding: 20px;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    right: 10px;
+    border: 2px solid white;
+    margin-left: 30px;
+}
+
+/* Media query for screens up to 600px wide */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+
+    h1 img {
+        max-width: 100px;
+    }
+
+    nav {
+        font-size: 40;
+    }
+}
+
+
+/* Slider styles */
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: -200px;
+    left: 0;
+    width: 10ovw;
+    height: 100vh;
+    overflow: auto;
+    z-index: 0;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    top: 100px;
+    margin-bottom: 20px;
+}
+
+.slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+.history {
+    padding: 20px;
+    position: absolute;
+    z-index: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.gallery {
+    width: 100%;
+    max-width: 100%;
+}
+
+.gallery-slider {
+    display: fixed;
+    justify-content: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    height: 100vh;
+    width: 100vw;
+    background-color: lightgrey;
+    margin: 0rem;
+    overflow: hidden;
+    margin-top: -260px;
+}
+
+
+#image-track {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    user-select: none;
+    margin-top: 800px;
+}
+
+#image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+}
+
+.text-under-image {
+    position: absolute;
+    bottom: 10px; /* Adjust the distance from the bottom */
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    color: black; /* Set text color */
+    font-size: 25px; /* Set font size */
+    font-weight: bold;
+}
+
+/* CSS styles for the Our Mission section */
+.our-mission {
+    text-align: center;
+    margin-top: 20px;
+    width: 40%; /* Set width to take up the middle 40% of the page */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.mission-title h2 {
+    font-size: 28px; /* Increase font size */
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold; /* Make the font thicker */
+    line-height: 1.5; /* Add line spacing */
+}
+
+.mission-statement p {
+    font-size: 18px; /* Increase font size */
+    color: #666;
+    font-weight: bold; /* Make the font thicker */
+    line-height: 1.5; /* Add line spacing */
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.7); /* Set background color */
+    color: #fff; /* Set text color */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center align text */
+    position: relative; /* Set position to relative */
+    margin-top: 20px; /* Add margin-top to create space below the mission section */
+}
+
+
+ 

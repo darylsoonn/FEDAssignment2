@@ -1,191 +1,192 @@
+/*intro*/ 
 body {  
-    font-family: Arial, sans-serif;  
-    margin: 0;  
-    padding: 0;  
-    background-color: lightgrey;  
-    overflow: auto;  
-    overflow-x: hidden;
+  font-family: Arial, sans-serif;  
+  margin: 0;  
+  padding: 0;  
+  background-color: lightgrey;  
+  overflow: auto;  
+  overflow-x: hidden;  
 }  
- 
+
 header {  
-    background-color: rgba(51, 51, 51, 0);  
-    color: #fff;  
-    padding: 15px 10px 10px;  
-    text-align: left;  
-    display: flex;  
-    justify-content: space-between;  
-    align-items: center;  
-    transition: background-color 0.3s ease;  
-    height: 50px;  
-    position: relative;
-    z-index: 1;
-    width: 100%;
+  background-color: rgba(51, 51, 51, 0);  
+  color: #fff;  
+  padding: 15px 10px 10px;  
+  text-align: left;  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  transition: background-color 0.3s ease;  
+  height: 50px;  
+  position: relative;  
+  z-index: 1;  
+  width: 100%;  
 }  
- 
+
 header:hover {  
-    background-color: rgba(51, 51, 51, 0.7);  
+  background-color: rgba(51, 51, 51, 0.7);  
 }  
- 
+
 h1 {  
-    display: flex;  
-    align-items: center;  
-    margin-left: 5px;  
-    margin-bottom: 20px;
+  display: flex;  
+  align-items: center;  
+  margin-left: 5px;  
+  margin-bottom: 20px;  
 }  
- 
+
 h1 img {  
-    display: block;  
-    max-width: 150px;  
-    height: auto;  
+  display: block;  
+  max-width: 150px;  
+  height: auto;  
 }  
- 
+
 nav {  
-    background-color: rgba(51, 51, 51, 0);  
-    padding: 5px 10px;  
-    display: flex;  
-    order: -1;  
-    font-size: 60;
+  background-color: rgba(51, 51, 51, 0);  
+  padding: 5px 10px;  
+  display: flex;  
+  order: -1;  
+  font-size: 60;  
 }  
- 
+
 nav a {  
-    text-decoration: none;  
-    color: white;  
-    padding: 6px;  
-    margin: 5px;  
-    display: inline-block;  
-    font-size: 13px;  
-    font-family: Bodoni MT, Bodoni 72, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+  text-decoration: none;  
+  color: white;  
+  padding: 6px;  
+  margin: 5px;  
+  display: inline-block;  
+  font-size: 13px;  
+  font-family: Bodoni MT, Bodoni 72, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;  
 }  
- 
+
 section {  
-    padding: 20px;  
+  padding: 20px;  
 }  
- 
+
 .profile-picture {  
-    width: 40px;  
-    height: 40px;  
-    border-radius: 50%;  
-    right:10px;
-    border: 2px solid white;  
+  width: 40px;  
+  height: 40px;  
+  border-radius: 50%;  
+  right: 10px;  
+  border: 2px solid white;  
+  margin-left: 30px;  
 }  
 
+/* Media query for screens up to 600px wide */  
+@media only screen and (max-width: 600px) {  
+  header {  
+      padding: 10px;  
+  }  
 
+  h1 img {  
+      max-width: 100px;  
+  }  
 
-
-@media only screen and (max-width: 600px) {
-    /* CSS rules for screens up to 600px wide (typical mobile phones) */
-    /* Adjust layout, font sizes, etc. for smaller screens */
-  }
-
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-  body {
-    height: 100vh;
-    background: linear-gradient(184deg, blue ,lightblue);
-  }
-  .start-screen,
-  .score-container {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  button {
-    border: none;
-    outline: none;
-    cursor: pointer;
-  }
-  #start-button,
-  #restart {
-    font-size: 1.3em;
-    padding: 0.5em 1.8em;
-    border-radius: 0.2em;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
-  }
-  #restart {
-    margin-top: 0.9em;
-  }
-  #display-container {
-    background-color: #ffffff;
-    padding: 3.1em 1.8em;
-    width: 80%;
-    max-width: 37.5em;
-    margin: 0 auto;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 0.6em;
-  }
-  .header {
-    margin-bottom: 1.8em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 0.6em;
-    border-bottom: 0.1em solid #c0bfd2;
-  }
-  .timer-div {
-    background-color: #e1f5fe;
-    width: 7.5em;
-    border-radius: 1.8em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.7em 1.8em;
-  }
-  .question {
-    margin-bottom: 1.25em;
-    font-weight: 600;
-  }
-  .option-div {
-    font-size: 0.9em;
-    width: 100%;
-    padding: 1em;
-    margin: 0.3em 0;
-    text-align: left;
-    outline: none;
-    background: transparent;
-    border: 1px solid #c0bfd2;
-    border-radius: 0.3em;
-  }
-  .option-div:disabled {
-    color: #000000;
-    cursor: not-allowed;
-  }
-  #next-button {
-    font-size: 1em;
-    margin-top: 1.5em;
-    background-color: #8754ff;
-    color: #ffffff;
-    padding: 0.7em 1.8em;
-    border-radius: 0.3em;
-    float: right;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
-  }
-  .hide {
-    display: none;
-  }
-  .incorrect {
-    background-color: #ffdde0;
-    color: #d32f2f;
-    border-color: #d32f2f;
-  }
-  .correct {
-    background-color: #e7f6d5;
-    color: #689f38;
-    border-color: #689f38;
-  }
-  #user-score {
-    font-size: 1.5em;
-    color: #ffffff;
-  }
+  nav {  
+      font-size: 40;  
+  }  
+} 
+body {  
+  height: 100vh;  
+  background: linear-gradient(184deg, blue ,lightblue);  
+}  
+.start-screen,  
+.score-container {  
+  position: absolute;  
+  top: 0;  
+  width: 100%;  
+  height: 100%;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;  
+}  
+button {  
+  border: none;  
+  outline: none;  
+  cursor: pointer;  
+}  
+#start-button,  
+#restart {  
+  font-size: 1.3em;  
+  padding: 0.5em 1.8em;  
+  border-radius: 0.2em;  
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);  
+}  
+#restart {  
+  margin-top: 0.9em;  
+}  
+#display-container {  
+  background-color: #ffffff;  
+  padding: 3.1em 1.8em;  
+  width: 80%;  
+  max-width: 37.5em;  
+  margin: 0 auto;  
+  position: absolute;  
+  transform: translate(-50%, -50%);  
+  top: 50%;  
+  left: 50%;  
+  border-radius: 0.6em;  
+}  
+.header {  
+  margin-bottom: 1.8em;  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  padding-bottom: 0.6em;  
+  border-bottom: 0.1em solid #c0bfd2;  
+}  
+.timer-div {  
+  background-color: #e1f5fe;  
+  width: 7.5em;  
+  border-radius: 1.8em;  
+  display: flex;  
+  align-items: center;  
+  justify-content: space-between;  
+  padding: 0.7em 1.8em;  
+}  
+.question {  
+  margin-bottom: 1.25em;  
+  font-weight: 600;  
+}  
+.option-div {  
+  font-size: 0.9em;  
+  width: 100%;  
+  padding: 1em;  
+  margin: 0.3em 0;  
+  text-align: left;  
+  outline: none;  
+  background: transparent;  
+  border: 1px solid #c0bfd2;  
+  border-radius: 0.3em;  
+}  
+.option-div:disabled {  
+  color: #000000;  
+  cursor: not-allowed;  
+}  
+#next-button {  
+  font-size: 1em;  
+  margin-top: 1.5em;  
+  background-color: #8754ff;  
+  color: #ffffff;  
+  padding: 0.7em 1.8em;  
+  border-radius: 0.3em;  
+  float: right;  
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);  
+}  
+.hide {  
+  display: none;  
+}  
+.incorrect {  
+  background-color: #ffdde0;  
+  color: #d32f2f;  
+  border-color: #d32f2f;  
+}  
+.correct {  
+  background-color: #e7f6d5;  
+  color: #689f38;  
+  border-color: #689f38;  
+}  
+#user-score {  
+  font-size: 1.5em;  
+  color: #ffffff;  
+}

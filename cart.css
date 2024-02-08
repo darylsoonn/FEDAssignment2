@@ -1,0 +1,117 @@
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    background-color: lightgrey;  
+    overflow: auto;  
+    overflow-x: hidden;  
+}  
+  
+header {  
+    background-color: rgba(51, 51, 51, 0);  
+    color: #fff;  
+    padding: 15px 10px 10px;  
+    text-align: left;  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    transition: background-color 0.3s ease;  
+    height: 50px;  
+    position: relative;  
+    z-index: 1;  
+    width: 100%;  
+}  
+  
+header:hover {  
+    background-color: rgba(51, 51, 51, 0.7);  
+}  
+  
+h1 {  
+    display: flex;  
+    align-items: center;  
+    margin-left: 5px;  
+    margin-bottom: 20px;  
+}  
+  
+h1 img {  
+    display: block;  
+    max-width: 150px;  
+    height: auto;  
+}  
+  
+nav {  
+    background-color: rgba(51, 51, 51, 0);  
+    padding: 5px 10px;  
+    display: flex;  
+    order: -1;  
+    font-size: 60;  
+}  
+  
+nav a {  
+    text-decoration: none;  
+    color: black;  
+    padding: 6px;  
+    margin: 5px;  
+    display: inline-block;  
+    font-size: 13px;  
+    font-family: Bodoni MT, Bodoni 72, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;  
+}  
+  
+section {  
+    padding: 20px;  
+}  
+  
+.profile-picture {  
+    width: 40px;  
+    height: 40px;  
+    border-radius: 50%;  
+    right: 10px;  
+    border: 2px solid white;  
+    margin-left: 30px;  
+}  
+  
+/* Media query for screens up to 600px wide */  
+@media only screen and (max-width: 600px) {  
+    header {  
+        padding: 10px;  
+    }  
+  
+    h1 img {  
+        max-width: 100px;  
+    }  
+  
+    nav {  
+        font-size: 40;  
+    }  
+} 
+ 
+ 
+.container { 
+    width: 80%; /* Set a width for better layout */ 
+    margin: 0 auto; /* Center the container */ 
+} 
+ 
+h1 { 
+    margin: 20px 0; 
+    text-align: center; /* Center align the heading */ 
+} 
+ 
+/* cart.css */ 
+ 
+#cart-items li { 
+    display: flex; /* Use flexbox */ 
+    align-items: center; /* Center items vertically */ 
+    margin-bottom: 20px; /* Increase margin between items */ 
+    background-color: #fff; /* White background for each item */ 
+    padding: 20px; /* Increase padding for item container */ 
+    border-radius: 10px; /* Add more border radius */ 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add more shadow for depth */ 
+    font-size: 30px; 
+} 
+ 
+#cart-items li img { 
+    height: 100px; /* Increase image height */ 
+    width: auto; /* Maintain aspect ratio */ 
+    margin-right: 80px; /* Add margin to the right of the image */ 
+    height: 180px; 
+}

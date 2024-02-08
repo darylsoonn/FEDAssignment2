@@ -1,0 +1,187 @@
+/*intro*/ 
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    background-color: lightgrey;  
+    overflow: auto;  
+    overflow-x: hidden;  
+}  
+  
+header {  
+    background-color: rgba(51, 51, 51, 0);  
+    color: #fff;  
+    padding: 15px 10px 10px;  
+    text-align: left;  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    transition: background-color 0.3s ease;  
+    height: 50px;  
+    position: relative;  
+    z-index: 1;  
+    width: 100%;  
+}  
+  
+header:hover {  
+    background-color: rgba(51, 51, 51, 0.7);  
+}  
+  
+h1 {  
+    display: flex;  
+    align-items: center;  
+    margin-left: 5px;  
+    margin-bottom: 20px;  
+}  
+  
+h1 img {  
+    display: block;  
+    max-width: 150px;  
+    height: auto;  
+}  
+  
+nav {  
+    background-color: rgba(51, 51, 51, 0);  
+    padding: 5px 10px;  
+    display: flex;  
+    order: -1;  
+    font-size: 60;  
+}  
+  
+nav a {  
+    text-decoration: none;  
+    color: black;  
+    padding: 6px;  
+    margin: 5px;  
+    display: inline-block;  
+    font-size: 13px;  
+    font-family: Bodoni MT, Bodoni 72, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;  
+}  
+  
+section {  
+    padding: 20px;  
+}  
+  
+.profile-picture {  
+    width: 40px;  
+    height: 40px;  
+    border-radius: 50%;  
+    right: 10px;  
+    border: 2px solid white;  
+    margin-left: 30px;  
+}  
+  
+/* Media query for screens up to 600px wide */  
+@media only screen and (max-width: 600px) {  
+    header {  
+        padding: 10px;  
+    }  
+  
+    h1 img {  
+        max-width: 100px;  
+    }  
+  
+    nav {  
+        font-size: 40;  
+    }  
+} 
+ 
+ 
+/*body*/ 
+#data-container { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px; 
+} 
+ 
+.product-container { 
+    position: relative; /* Make the container a positioning context */ 
+    background-color: white; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    box-sizing: border-box; 
+    transition: transform 0.3s ease; 
+    display: flex; 
+    flex-direction: column; 
+} 
+ 
+.product-container:hover { 
+    transform: translateY(-5px); 
+} 
+ 
+.product-container h2 { 
+    margin-top: 0; 
+    font-size: 18px; 
+    color: #333; 
+} 
+ 
+.product-container p { 
+    margin-bottom: 10px; 
+    color: #666; 
+} 
+ 
+.product-container img { 
+    width: 200px; /* Making images responsive */ 
+    height: 200px; /* Maintaining aspect ratio */ 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    align-self: center; 
+} 
+ 
+.buy-button { 
+    position: absolute; /* Position the button absolutely */ 
+    bottom: 10px; /* Adjust the distance from the bottom */ 
+    right: 10px; /* Adjust the distance from the right */ 
+    padding: 10px 20px; /* Adjust button padding */ 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; /* Adding border radius */ 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    width: 150px; 
+    height: 50px; 
+    font-size: 24px; 
+    font-weight: bold; 
+} 
+ 
+.buy-button:hover { 
+    background-color: #0056b3; 
+} 
+ 
+.cart-button { 
+    position: fixed; 
+    top: 90px; 
+    right: 20px; 
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    width:100px; 
+    text-align: center; 
+    font-size: 24px; 
+} 
+ 
+.deals-container { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px; 
+    width:450px; 
+    font-size:50px; 
+    flex-wrap:nowrap; 
+} 
+ 
+.deals-container h1 { 
+    margin: 0; /* Remove default margin */ 
+} 
+ 
+.dotlottie-player { 
+    width: 300px; 
+    height: 300px; 
+}
