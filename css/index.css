@@ -173,20 +173,10 @@ section {
     object-position: 100% center;
 }
 
-.text-under-image {
-    position: absolute;
-    bottom: 10px; /* Adjust the distance from the bottom */
-    left: 50%; /* Center the text horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    color: black; /* Set text color */
-    font-size: 25px; /* Set font size */
-    font-weight: bold;
-}
-
 /* CSS styles for the Our Mission section */
 .our-mission {
     text-align: center;
-    margin-top: 20px;
+    margin-top: -100px;
     width: 40%; /* Set width to take up the middle 40% of the page */
     margin: 0 auto; /* Center horizontally */
 }

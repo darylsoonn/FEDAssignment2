@@ -10,8 +10,9 @@ Our main idea was to do a e-commerce website that allowed users to shop at this 
 
 ## Features
 
-We have 3 pages, homepage, shop page, trivia page, with the cart page as a subpage of shop page.
+We have 3 pages, homepage, shop page, trivia page, with the cart page as a subpage of shop page and loading page
 
+- When user clicks on website, the first thing they will see is the loading screen before redirecting to the main homepage.
 - The homepage is our mainpage and it is the eye catcher for the shopgoers, it shows a carousell and a movable slider to show the models and what shopgoers might be able to look out for in the store.
 - The shop page uses WebAPI to display a shop page that has a number of products, it comes with a cart page which allows the user to select products on the main shop page and add it to their cart in the cart page. 
 - The cart page allows for viewing the products that the users have selected, as well as displaying the price for the total cost of the products.
@@ -41,6 +42,7 @@ We have 3 pages, homepage, shop page, trivia page, with the cart page as a subpa
 ## Technologies used
 - We used HTML, CSS and Javascript as our main coding languages.
 - We used a Flame Lottie animation from https://lottiefiles.com/free-animations/fire, as the animation for our Great Deals section.
+- We used a loading screen Lottie animation from 
 - We used FakeStoreAPI to generate a store catalogue that we used in our shop page.
 
 

@@ -96,7 +96,6 @@ h1 {
     text-align: center; /* Center align the heading */ 
 } 
  
-/* cart.css */ 
  
 #cart-items li { 
     display: flex; /* Use flexbox */ 
