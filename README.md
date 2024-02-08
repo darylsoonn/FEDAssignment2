@@ -10,7 +10,7 @@ Our main idea was to do a e-commerce website that allowed users to shop at this 
 
 ## Features
 
-We have 3 pages, homepage, shop page, trivia page, with the cart page as a subpage of shop page
+We have 3 pages, homepage, shop page, trivia page, with the cart page as a subpage of shop page.
 
 - The homepage is our mainpage and it is the eye catcher for the shopgoers, it shows a carousell and a movable slider to show the models and what shopgoers might be able to look out for in the store.
 - The shop page uses WebAPI to display a shop page that has a number of products, it comes with a cart page which allows the user to select products on the main shop page and add it to their cart in the cart page. 
@@ -22,7 +22,7 @@ We have 3 pages, homepage, shop page, trivia page, with the cart page as a subpa
 #### Homepage
 - There is a 3 image carousell that fades in and out automatically.
 - There is a gallery scroll function that shows models.
-- Comes with a footer to 
+- Comes with a footer to show contact information and how to contact the company.
 
 #### Shop page
 - There is a catalogue of items that the shop sells, which shopgoers can select and add to their cart.
@@ -34,6 +34,7 @@ We have 3 pages, homepage, shop page, trivia page, with the cart page as a subpa
 
 ### Features left to implement 
 - Another feature idea could be implementing a log in page using RestDB.
+- Account page could be added as another idea, when clicking on the profile picture.
 - There could also be a voucher function/rewards function that ties back into a user's account and he can choose to use it in the cart page when they are paying for products, and it discounts accordingly.
 
 
