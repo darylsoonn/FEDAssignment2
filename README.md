@@ -22,6 +22,7 @@ We have 3 pages, homepage, shop page, trivia page, with the cart page as a subpa
 #### Homepage
 - There is a 3 image carousell that fades in and out automatically.
 - There is a gallery scroll function that shows models.
+- Comes with a footer to 
 
 #### Shop page
 - There is a catalogue of items that the shop sells, which shopgoers can select and add to their cart.
@@ -43,10 +44,27 @@ We have 3 pages, homepage, shop page, trivia page, with the cart page as a subpa
 
 
 ## Testing 
-- 
+
+#### Shop Page
+- Creating an Order:
+    1. Click on the product you want to select
+    2. Press on the buy button
+    3. Added to Cart
+    4. View Cart and Total is displayed
+
+
+### Issues and Bugs
+Issue regarding creating an order:
+- When user clicks back to the shop page, the store total value of the items in the cart disappears along with the items.
+
+Issue regarding resizing:
+- Despite countless hours trying to resize the homepage to fit all the phone's formattings, it regrettably could not be done. 
+
 
 ## Credits
 
 ### Media
 - The photos in this project were obtained from https://pausemag.co.uk/category/editorials/, whilst the logos were self made in Canva.
 
+### Inspiration
+- Some inspiration was taken from the website https://nakashimawoodworkers.com/, mainly the concept of the homepage's fading in and out gallery.
