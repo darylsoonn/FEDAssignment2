@@ -1,4 +1,4 @@
-# FEDAssignment2
+# FEDAssignment2 - ComCore
 
 Introducing ComCore! Your stop for elevating your style and finding your unique fashion sense! At ComCore, we are passionate about bringing the latest trends in clothing to your fingertips!
 
@@ -10,10 +10,11 @@ Our main idea was to do a e-commerce website that allowed users to shop at this 
 
 ## Features
 
-We have 3 pages, homepage, shop page, trivia page
+We have 3 pages, homepage, shop page, trivia page, with the cart page as a subpage of shop page
 
-- The homepage is our mainpage and it shows 
+- The homepage is our mainpage and it is the eye catcher for the shopgoers, it shows a carousell and a movable slider to show the models and what shopgoers might be able to look out for in the store.
 - The shop page uses WebAPI to display a shop page that has a number of products, it comes with a cart page which allows the user to select products on the main shop page and add it to their cart in the cart page. 
+- The cart page allows for viewing the products that the users have selected, as well as displaying the price for the total cost of the products.
 - The trivia page is our feature for gamification. The trivia page allows for shopgoers to play a 10 question multiple choice trivia that tests on the famous celebrities and their fashion. The quiz focuses on celebrity fashion, which ties back to the main theme of our idea, which is trendy and up-to-date fashion, which is prominent amongst celebrities and the youth.
 
 ### Existing Features
@@ -37,10 +38,12 @@ We have 3 pages, homepage, shop page, trivia page
 
 ## Technologies used
 - We used HTML, CSS and Javascript as our main coding languages.
+- We used a Flame Lottie animation from https://lottiefiles.com/free-animations/fire, as the animation for our Great Deals section.
 - We used FakeStoreAPI to generate a store catalogue that we used in our shop page.
 
 
 ## Testing 
+- 
 
 ## Credits
 
