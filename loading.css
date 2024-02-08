@@ -1,0 +1,106 @@
+body {
+    background-color: #121212;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loader {
+    display: flex;
+    align-items: center;
+  }
+  
+  .loader-shap {
+    width: 2rem;
+    height: 2rem;
+    background-color: #ffde59;
+    margin: 1rem;
+    border-radius: 50%;
+    animation: load_shap 1.2s ease infinite;
+  }
+  
+  .loader-shap:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .loader-shap:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .loader-shap:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes load_shap {
+    50% {
+      transform: translateY(-50%);
+      border-bottom: 16px solid #292929;
+      box-shadow: 0 8rem 2rem rgba(255, 222, 89, 0.24);
+    }
+  }
+  /*----------- End Main Style ------*/
+  /* ======= Datlearn ======= */
+  .datlearn {
+    position: fixed;
+    top: 0;
+    text-align: center;
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    color: #fff;
+    visibility: hidden;
+  }
+  
+  .datlearn--show {
+    visibility: visible;
+  }
+  .datlearn__love {
+    margin-left: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .typing {
+    display: flex;
+    align-items: center;
+  }
+  
+  .typing::after {
+    content: " |";
+    background-color: #fff;
+    font-size: 2rem;
+    animation: blink 1s infinite;
+  }
+  
+  .typing__text {
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: cursive;
+    text-transform: capitalize;
+    max-width: 0;
+    background-color: #0d47a1;
+    padding-left: 0.9rem;
+    padding-right: 0.4rem;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(20) infinite;
+  }
+  
+  @keyframes blink {
+    25% {
+      opacity: 0;
+    }
+    50%,
+    70%,
+    100% {
+      opacity: 1;
+    }
+  }
